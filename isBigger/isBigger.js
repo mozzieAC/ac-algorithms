@@ -39,7 +39,44 @@ console.log(result) // -1
 
 
 
+
+/*
+My pseudo code:
+Input: two numbers 
+Output: true, false, 0 (or -1 if undefined or not a number)
+
+Create nested if statements
+create variable "result" to hold value of the comparison
+if a > b result is true
+if a < b result is false
+if a = b result is 0
+if a or b is undefined or NAN result is -1
+return result
+**/
+
+
+//Laura's pseudo code:
+//inputs: two numbers, a + b, parameters
+//output: true, false, 0, or -1
+
+// purpose: evaluate a and be to see if they are numbers AND how they compare to one another )ie, if one is bigger
+
 function isBigger(a, b) {
-	//Your code here
-	
+	//conditional statement to test if a > b
+	// conditional statement to test if a < b
+	// conidtional statement if a === b
+	// if a or be are not numbers
+	var result = ""
+	if (typeof a === "number" && typeof b === "number") {
+		if (a > b) {
+			result = true;
+		} else if (a < b) {
+			result = false;
+		}	else {
+			result = 0;
+		}
+	} else {
+		result = -1;
+	}
+	return result;	
 }

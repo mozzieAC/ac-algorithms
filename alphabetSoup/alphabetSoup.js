@@ -32,8 +32,31 @@ var result = alphabetSoup("my string oh my");
 console.log(result) // "ghimmnorstyy"
 
 **/
-
+//Input: string
+//Output: string: alphabatized 
+//purpose: alphabatized list of the letters in the string (that was the input (exclusing spaces))
 function alphabetSoup(str) {
-	//Your code here
-	
+	//take in the string as the argument of the function.
+	//turn the string into an array of characters using split to separate the string in to substrings and store the restulting array as a variable. the split method takes in a deliimter (use empty string)	var letters = str.split('');
+	//Sort the array to alphabatize it
+	//Join the elements in the array back into a string, the argument will be "" for the .join() method will be ''
+	//Get rid of the spaces using trim
+	//return it
+	var letters = str.split('').sort().join('').trim();
+	return letters;
 }
+
+	
+  
+// SECOND WAY TO DO IT:
+  
+//   function alphabetSoup2(str) {
+   
+// 	var letters = str.split('');
+// 	var array = letters.sort();
+// 	var newArray = array.join("");
+// 	var newString=newArray.trim();
+// 	return newString;
+//   }
+  
+

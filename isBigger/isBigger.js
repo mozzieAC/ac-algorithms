@@ -64,7 +64,7 @@ return result
 function isBigger(a, b) {
 	//conditional statement to test if a > b
 	// conditional statement to test if a < b
-	// conidtional statement if a === b
+	// conditional statement if a === b
 	// if a or be are not numbers
 	var result = ""
 	if (typeof a === "number" && typeof b === "number") {

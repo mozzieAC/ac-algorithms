@@ -33,4 +33,13 @@ function cyclicRotation(arr, rotation){
     return arr; 
 }
   
-    
+var array = [3, 8, 9, 7, 6]
+var K = 3;
+var newArray = cyclicRotation(array, K);
+console.log(newArray);
+
+
+var array = [3, 8, 9, 7, 6]
+var K = 2;
+var newArray = cyclicRotation(array, K);
+console.log(newArray);

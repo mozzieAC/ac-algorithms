@@ -8,12 +8,29 @@
 //
 //    Write a function:
 //
-//function cyclicRotation(A, K);
+//function cyclicRotation(A, K);  (A is the array, K is the number of rotations)
 //
 //that, given a zero-indexed array A consisting of N integers and an integer K, returns the array A rotated K times.
 //
 //    For example, given array A = [3, 8, 9, 7, 6] and K = 3, the function should return [9, 7, 6, 3, 8].\
 
+
+//Input: array and number of rotations
+//Output: one new array
+//Purpose:  shift the elements in the array to the right by "K" times and create a new array
+// write a function called cyclicRoation that takes in two parameters, A, K
+//  
+
 function cyclicRotation(arr, rotation){
-    //Your code here...
+    //create a for loop that will run K number of times
+    //in the loop pop off last array element, store that element in a variable
+    //then add that variable to the front of the modified array using unshift
+    for (var i = 0; i < rotation; i++) {
+        var popped = arr.pop();
+        arr.unshift(popped);
+    }
+    //return the modified Array as a new variable.
+    return arr; 
 }
+  
+    

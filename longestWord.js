@@ -19,7 +19,35 @@
 // findLongestWord("What if we try a super-long word such as otorhinolaryngology") should return 19.
 
 
-function findLongestWord(str) {
-  //your code here
-}
+//Input: A string (string of mulitple words)
+//Output: A number (the number of characters in the longest word in the string)
+//Purpose: Be able to count the numbe rof letters in a word in a multi-word string, and to find and return the number of characters of the longest word in the input sentence
 
+
+//Create a variable to store the longest string
+//Variable to store our array
+//.split() to turn our stirng into an array
+//Create for loop through an array of words
+
+//Conditional statement to test to see if the new word
+  // compare the legnth of first string, to the legnth of the second string
+  // if length of the second string is longer, make that the longest
+// Increment the counter for the next item in the array to compare
+
+//Return the variable storing the number of characters longest word
+
+function findLongestWord(str) {
+//Split the input string into an array of substrings/words
+  var wordArray = str.split(" ");
+  var longestWord = wordArray[0].length;
+  for (i = 0; i < wordArray.length; i++) {
+    if (wordArray[i].length > longestWord) {
+      longestWord = wordArray[i].length;
+    }
+  }
+  return longestWord;
+}
+  
+  var result = findLongestWord("What if we try a super-long word such as otorhinolaryngology");
+  console.log(result);
+  

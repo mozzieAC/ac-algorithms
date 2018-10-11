@@ -12,10 +12,38 @@
 
 //Helpful Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
 
+//Input: An array of objects
+//Output: A new array of objects that have keys for name and orbital perioud
+//Purpose: Calculate orbital period of objects orbiting Earth.
+
+
+
+//Create new var, orbitalArr, as a new empty array 
+//Loop through elements of the input array
+  //Calculate orbitalPeriod
+  //Orbital Period = ( 2 * pi * sqrt((a-cubed)/GM))
+    //a is equal to aveAlt + earthRadius
+    // Math.round(2 * Math.PI * Math.sqrt(Math.pow(arr[i].aveAlt+earthRadius, 3)/GM))
+    //Create the name key for hte object and then create the orbitalPeriod key for the object
+  //Push new elements into orbitalArr
+//Return the Collection, orbitalArr
+
+
+//Return Collection, orbitalArr, 
+
+
 function orbitalPeriod(arr) {
   var GM = 398600.4418;
   var earthRadius = 6367.4447;
-  //your code here
+  var orbitalArr = [];
+  for (var i = 0; i < arr.length; i++){
+    orbitalPeriodCalc = Math.round(2 * Math.PI * (Math.sqrt(Math.pow(arr[i].avgAlt + earthRadius, 3)/GM)));
+    var calculatedObj = {};
+    calculatedObj.name = arr[i].name;
+    calculatedObj.orbitalPeriod = orbitalPeriodCalc;
+    orbitalArr.push(calculatedObj);
+  }
+  return orbitalArr;
 }
 
 orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);

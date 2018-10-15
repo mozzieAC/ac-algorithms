@@ -10,8 +10,45 @@
 
 //The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
+
+//Input: A string
+//Output: Nested array
+//Purpose: take each character, get its matching dna pair, and return the results in a nested array
+
+//create a variable that will hold all the the base-pairs (encapsulating/parent array)
+//create a variable that will hold the elements of the input string as an array (arrOfStrings).
+//split the string into an array and assign it to the created variable (arrOfStrings)
+//loop through the elements of the array 
+   //for each element in the array
+   //conditional statement that tests what dna letter it is and create a base pair array with its matching letter
+    //push the base pair array in to the parent array
+//return parent array
+//
+//
+
 function pairElement(str) {
-  //your code here
+  var parentArr = [];
+  var arrOfStrings = str.split("");
+  for (var i = 0; i < arrOfStrings.length; i++){
+    if (arrOfStrings[i].toUpperCase() === "G") {
+      var basePair = ["G", "C"];
+      parentArr.push(basePair);
+    } 
+    else if (arrOfStrings[i].toUpperCase() === "C") {
+      var basePair = ["C", "G"];
+      parentArr.push(basePair);
+    }
+    else if (arrOfStrings[i].toUpperCase() === "A") {
+      var basePair = ["A", "T"];
+      parentArr.push(basePair);
+    }
+    else  {
+      var basePair = ["T", "A"];
+      parentArr.push(basePair);
+    }
+  } 
+  return parentArr;
+  
 }
 
 pairElement("GCG");
